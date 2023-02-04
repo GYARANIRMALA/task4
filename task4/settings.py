@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'task4_app',
     'products_app',
     'rest_framework_simplejwt',
+    'rest_framework_swagger',
+    'drf_yasg',
     
 ]
 
@@ -120,6 +122,12 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+SWAGGER_SETTINGS = {
+    "SECURITY_DEFINITIONS": {
+        "Bearer": {"type": "apiKey", "name": "Authorization", "in": "header"},
+    }
+}
 
 
 # Static files (CSS, JavaScript, Images)
